@@ -2,7 +2,7 @@
 基于已有[markdown-preview-enhanced](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)项目，支持正确预览基于latex的数学公式编号，简洁性、数学友好
 
 ## 带编号公式与引用
-
+```
 下面是一个带编号的公式与引用示例：见式 \eqref{eq1}。
 
 $$
@@ -19,6 +19,7 @@ $$
 \mathrm{e}^{\mathrm{i}\pi}+1=0
 \end{equation}
 $$
+```
 
 ## 安装教程（VS Code）
 
