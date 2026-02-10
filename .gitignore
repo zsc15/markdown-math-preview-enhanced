@@ -1,0 +1,9 @@
+.vscode-test
+*.vsix
+node_modules
+out
+.direnv
+mume
+crossnote
+.vscode-test-web
+yarn-error.log
