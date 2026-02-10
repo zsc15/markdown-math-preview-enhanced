@@ -1,80 +1,46 @@
-<h1 align="center"> Markdown Preview Enhanced </h1>
+![alt text](image-1.png)
+基于已有[markdown-preview-enhanced](https://github.com/shd101wyy/vscode-markdown-preview-enhanced)项目，支持正确预览数学公式编号，简洁性、数学友好
 
-![intro](https://user-images.githubusercontent.com/1908863/28495106-30b3b15e-6f09-11e7-8eb6-ca4ca001ab15.png)
+## 带编号公式与引用
 
-<p align="center">
-<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/"> English &nbsp;&nbsp; </a>  
-<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/"> 简体中文 &nbsp;&nbsp; </a>  
-<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-tw/"> 繁體中文 &nbsp;&nbsp; </a>
-<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/ja-jp/"> 日本語 &nbsp;&nbsp; </a> <br>
-</p>
+下面是一个带编号的公式与引用示例：见式 \eqref{eq1}。
 
-<p align="center">
-<a href="https://atom.io/packages/markdown-preview-enhanced">Atom</a>
-&
-<a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">VSCode</a> 
-&
-<a href="https://vscode.dev">VSCode for the Web</a>
-<br>
-<br>
-  <a href="https://a.paddle.com/v2/click/16413/111548?link=1227"><img src="https://img.shields.io/badge/LEARN-VSCODE%20POWER%20USER%20COURSE%20%E2%86%92-gray.svg?colorB=4D2AFF" alt="Become VSCode Power User"></a>
-</p>
+$$
+\begin{equation}
+\label{eq1}
+\int_0^1 x^2\, \mathrm{d} x = \frac{1}{3}
+\end{equation}
+$$
 
-## Supporting this project
+欧拉公式\eqref{eq2}：
+$$
+\begin{equation}
+\label{eq2}
+\mathrm{e}^{\mathrm{i}\pi}+1=0
+\end{equation}
+$$
 
-Markdown Preview Enhanced is an open source project released under the [University of Illinois/NCSA Open Source License](LICENSE.md). Its ongoing development is made possible thanks to the support by these awesome [backers](https://shd101wyy.github.io/markdown-preview-enhanced/#/backers). You can help make this project better by [supporting us on GitHub Sponsors](https://github.com/sponsors/shd101wyy), [PayPal](https://shd101wyy.github.io/markdown-preview-enhanced/#/paypal), or [微信支付 Wechat Pay](https://shd101wyy.github.io/markdown-preview-enhanced/#/wechat). Thank you!
+## 安装教程（VS Code）
 
-## Sponsors
+1. 下载本项目到本地（或直接克隆）。
+2. VS Code 打开项目根目录。
+3. 安装依赖：
+	- 终端进入项目根目录，执行 `npm install`
+4. 编译与打包：
+	- 执行 `npm run build`
+5. 运行扩展：
+	- 按 `F5` 启动扩展开发宿主（Extension Development Host）。
+6. 在新打开的 VS Code 窗口中，打开任意 Markdown 文件并预览即可。
 
-<p><a title="Try CodeStream" href="https://sponsorlink.codestream.com/?utm_source=vscmarket&amp;utm_campaign=shd101wyy-markdown&amp;utm_medium=banner"><img src="https://alt-images.codestream.com/codestream_logo_shd101wyy-markdown.png"></a></br>
-Manage pull requests and conduct code reviews in your IDE with full source-tree context. Comment on any line, not just the diffs. Use jump-to-definition, your favorite keybindings, and code intelligence with more of your workflow.<br> <a title="Try CodeStream" href="https://sponsorlink.codestream.com/?utm_source=vscmarket&amp;utm_campaign=shd101wyy-markdown&amp;utm_medium=banner">Learn More</a></p>
+> 如需发布为 .vsix，可执行 `npm run package` 并通过 VS Code 的“从 VSIX 安装”。
 
-<br>
+## 打包为 VSIX
 
-<a href="https://github.com/sponsors/shd101wyy">
-  <img src="https://github.blog/wp-content/uploads/2019/05/mona-heart-featured.png?" width="200"></a><br>
+1. 安装打包工具：`npm i -g @vscode/vsce`
+2. 生成扩展包：`vsce package`
+3. 生成的 .vsix 文件会在项目根目录。
 
-These [GitHub Sponsors](https://github.com/sponsors/shd101wyy#sponsors) and [Backers](https://shd101wyy.github.io/markdown-preview-enhanced/#/backers) help push this project forward 🎉.
+## 修改扩展名称与图标
 
-## Introduction
-
-Markdown Preview Enhanced is an extension that provides you with many useful functionalities such as automatic scroll sync, [math typesetting](https://shd101wyy.github.io/markdown-preview-enhanced/#/math), [mermaid](https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=mermaid), [PlantUML](https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=plantuml), [pandoc](https://shd101wyy.github.io/markdown-preview-enhanced/#/pandoc), PDF export, [code chunk](https://shd101wyy.github.io/markdown-preview-enhanced/#/code-chunk), [presentation writer](https://rawgit.com/shd101wyy/markdown-preview-enhanced/master/docs/presentation-intro.html), etc. A lot of its ideas are inspired by [Markdown Preview Plus](https://github.com/atom-community/markdown-preview-plus) and [RStudio Markdown](http://rmarkdown.rstudio.com/).
-
-Feel free to ask questions, post issues, submit pull request, and request new features.
-
-For more information about this project and how to use this extension, please check out our documentation ⬇︎
-
-## Documentation
-
-To check out the documentation, visit
-
-- [English](https://shd101wyy.github.io/markdown-preview-enhanced/#/)
-- [简体中文](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
-- [繁體中文](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-tw/)
-- [日本語](https://shd101wyy.github.io/markdown-preview-enhanced/#/ja-jp/)
-
-Contact me if you are willing to help translate the documentation :)
-
-## Keybindings
-
-> The <kbd>cmd</kbd> key for _Windows_ is <kbd>ctrl</kbd>.
-
-| Shortcuts                                         | Functionality              |
-| ------------------------------------------------- | -------------------------- |
-| <kbd>cmd-k v</kbd> or <kbd>ctrl-k v</kbd>         | Open preview to the Side   |
-| <kbd>cmd-shift-v</kbd> or <kbd>ctrl-shift-v</kbd> | Open preview               |
-| <kbd>ctrl-shift-s</kbd>                           | Sync preview / Sync source |
-| <kbd>shift-enter</kbd>                            | Run Code Chunk             |
-| <kbd>ctrl-shift-enter</kbd>                       | Run all Code Chunks        |
-| <kbd>cmd-=</kbd> or <kbd>cmd-shift-=</kbd>        | Preview zoom in            |
-| <kbd>cmd--</kbd> or <kbd>cmd-shift-\_</kbd>       | Preview zoom out           |
-| <kbd>cmd-0</kbd>                                  | Preview reset zoom         |
-| <kbd>esc</kbd>                                    | Toggle sidebar TOC         |
-
-## Changelog
-
-Please check the [Releases](https://github.com/shd101wyy/vscode-markdown-preview-enhanced/releases) page of this project.
-
-## License
-
-[University of Illinois/NCSA Open Source License](LICENSE.md)
+- 名称：已设置为 markdown-math-preview-enhanced（见 package.json 的 `name` 与 package.nls 的 `displayName`）。
+- 图标：替换 `media/mpe.png`，或在 package.json 中修改 `icon` 指向你自己的图片路径。
